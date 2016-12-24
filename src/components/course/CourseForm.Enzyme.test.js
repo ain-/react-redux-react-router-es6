@@ -12,7 +12,7 @@ function setup(saving) {
     onChange: () => {}
   };
 
-  return shallow(<CourseForm {...props} />)
+  return shallow(<CourseForm {...props} />);
 }
 
 describe('CourseForm via Enzyme', () => {

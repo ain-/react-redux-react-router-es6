@@ -3,12 +3,14 @@ import webpack from 'webpack';
 import path from 'path';
 import config from '../webpack.config.dev';
 import open from 'open';
+import compression from 'compression';
 
 /* eslint-disable no-console */
 
 const port = 3000;
 const app = express();
 
+app.use(compression());
 app.use(express.static('dist'));
 
 app.get('*', function(req, res) {
